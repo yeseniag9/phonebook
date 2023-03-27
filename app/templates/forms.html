@@ -1,0 +1,20 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="email-field">
+            {{ form.email.label }}
+            {{ form.email(class = 'form-control', placeholder = 'place email here ') }}
+        </fieldset>
+    </div>
+
+        <fieldset id="pass-field">
+            {{ form.password.label }}
+            {{ form.password(class = "form-control", placeholder = "Place password here ") }} <!-- Class information is part of bootstrap -->
+            <!-- The line above is syntax for allowing python to take the data back out from the form into our auth
+            routes, while simultaneously styling the form -->
+        </fieldset>
+
+        <!-- Submit button area -->
+        {{ form.submit_button(class = "btn btn-primary btn-block mt-2")}}
+
+</form>
